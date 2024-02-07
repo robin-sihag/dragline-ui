@@ -3,6 +3,6 @@ import { nameslice } from "./reducer";
 
 export const redstore = configureStore({
   reducer:{
-    namededitingreducer: nameslice.reducer
+    ss: nameslice.reducer
   }
 })

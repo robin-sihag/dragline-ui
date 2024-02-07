@@ -7,6 +7,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { customanme, nameslice } from "./reducer";
+
 function App() {
   //static data
   const staticTableData = [
@@ -257,7 +260,8 @@ function App() {
         console.log(err);
       });
   }, []);
-
+  const dis = useDispatch();
+  const name = useSelector((state)=> state.ss.name);
   return (
     <div className="App">
       <header className="App-header">
@@ -282,6 +286,14 @@ function App() {
                 ))}
               </TableBody>
             </Table>
+            <button
+              onClick={() => {
+                dis(nameslice.actions.customanme("asF"));
+              }}
+            >
+              here
+            </button>
+            <h2>{name}</h2>
           </>
         )}
       </header>
