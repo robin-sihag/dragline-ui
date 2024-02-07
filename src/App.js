@@ -7,7 +7,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import { useDispatch } from 'react-redux'
+// import { nametodot } from "./reducers";
+
 function App() {
+
+  // const dis = useDispatch();
   //static data
   const staticTableData = [
     {
@@ -284,6 +289,8 @@ function App() {
             </Table>
           </>
         )}
+
+        {/* <button onClick={()=>{dis(nametodot)}}>redux</button> */}
       </header>
     </div>
   );
